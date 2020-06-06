@@ -1,4 +1,3 @@
 # Simple Start Page
 
-Use this template for a simple new tab, start page, or home page. Uses 
-FontAwesome for icons so you have nearly endless choices for links.
+For my personal use but feel free to fork and do whatever to it.

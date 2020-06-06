@@ -1,63 +1,43 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Startpage</title>
-      <link rel="stylesheet" type="text/css" href="css/animate.css">
-      <link rel="stylesheet" type="text/css" href="css/fa.min.css">
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <script type="text/javascript" src="js/script.js"></script>
-  </head>
-  <body onload="startTime()">
-    <div id="main">
-      <div id="content">
-        <center>
-        <div id="time"></div>
-        <div id="date"></div>
-        <div id="links">
-          <ul>
-            <li>
-              <a href="https://mail.protonmail.com/inbox" class="envelope">
-                <i class="fa fa-envelope"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com" class="facebook">
-                <i class="fa fa-facebook-square"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://weather.com/" class="weather">
-                <i class="fa fa-sun-o"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://bank.simple.com/signin" class="usd">
-                <i class="fa fa-usd"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://youtube.com" class="youtube">
-                <i class="fa fa-youtube-play"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://maps.google.com" class="maps">
-                <i class="fa fa-location-arrow"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/trending" class="github">
-                <i class="fa fa-github"></i>
-              </a>
-            </li>
-        </div>
-        <div id="search">
-          <form method="get" action="https://www.google.com/search?q">
-              <input class="search" name="q" type="search" results=5 name=s placeholder="Google" autofocus>
-          </form>
-        </div>
-        </center>
-      </div>
-    </div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <main>
+    <!-- Time -->
+    <section id="time">
+      <h1><time></time></h1>
+      <noscript>🕒</noscript>
+      <h2><time></time></h2>
+    </section>
+
+    <form action="https://www.google.com/search" method="GET">
+      <input type="search" name="q" id="search" placeholder="Google" required>
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"> <path d="M8.3283 0C3.73857 0 0 3.73857 0 8.3283C0 12.918 3.73857 16.6566 8.3283 16.6566C10.3242 16.6566 12.1571 15.9479 13.5937 14.7714L18.5663 19.7439C18.643 19.8239 18.7349 19.8877 18.8366 19.9316C18.9383 19.9756 19.0478 19.9988 19.1586 20C19.2694 20.0011 19.3793 19.9801 19.4819 19.9382C19.5845 19.8963 19.6777 19.8344 19.756 19.756C19.8344 19.6777 19.8963 19.5845 19.9382 19.4819C19.9801 19.3793 20.0011 19.2694 20 19.1586C19.9988 19.0478 19.9756 18.9383 19.9316 18.8366C19.8877 18.7349 19.8239 18.643 19.7439 18.5663L14.7714 13.5937C15.9479 12.1571 16.6566 10.3242 16.6566 8.3283C16.6566 3.73857 12.918 0 8.3283 0ZM8.3283 1.66566C12.0178 1.66566 14.9909 4.63876 14.9909 8.3283C14.9909 12.0178 12.0178 14.9909 8.3283 14.9909C4.63876 14.9909 1.66566 12.0178 1.66566 8.3283C1.66566 4.63876 4.63876 1.66566 8.3283 1.66566Z"></path> </svg>
+      </button>
+    </form>
+
+    <nav>
+      <!-- TODO: SVG sprite -->
+      <!-- Main -->
+      <a href="https://www.notion.so/ibmc/" id="notion">N</a>
+      <!-- News/Reading -->
+      <a href="https://github.com/trending" id="github">G</a>
+      <!-- Social -->
+      <a href="https://www.facebook.com/" id="facebook">F</a>
+      <!-- Media -->
+      <a href="https://www.youtube.com/" id="youtube">Y</a>
+      <a href="https://www.hulu.com" id="hulu">H</a>
+      <a href="https://www.netflix.com" id="netflix">N</a>
+    </nav>
+  </main>
+
+  <!-- Footer Scripts and Styles -->
+  <script src="/assets/js/script.js"></script>
+</body>
 </html>

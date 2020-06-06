@@ -1,0 +1,145 @@
+/* Vars */
+:root {
+  --spacing: 1rem;
+  --color-light: #e1e1e1;
+  --color-dark: #282b2b;
+  --color-darker: #1f2020;
+  --color-primary: seagreen;
+}
+
+/* Reset */
+* { box-sizing: border-box; }
+
+html { font-size:calc(1.5vmin + 6px); }
+
+html, body { 
+  margin: 0;
+  padding: 0; 
+  min-height: 100vh; 
+}
+
+body {
+  background: var(--color-darker);
+  font-family: sans-serif;
+}
+
+/* Main Grid */
+main {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: 50% auto 1fr;
+  gap: var(--spacing);
+}
+
+/* Grid Items Shared */
+main > * {
+  padding: var(--spacing);
+  display: flex;
+}
+
+/* Time */
+#time {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1;
+  color: #e1e1e1;
+}
+
+h1, h2 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: calc(10 * var(--spacing));
+}
+
+h2 {
+  font-size: calc(5 * var(--spacing));
+  margin-top: calc(2 * var(--spacing));
+}
+
+/* Form */
+
+form {
+  flex-direction: row-reverse;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+}
+
+form:focus-within > * { 
+  outline: 0;
+}
+
+form:before {
+  content: '';
+  box-shadow: none;
+  display: block;
+  position: absolute;
+  bottom: calc(var(--spacing) * 0.75); left: 50%;
+  height: calc(var(--spacing) * 0.25); width: 0;
+  background-color: var(--color-primary);
+  transition: 0.3s width ease-in-out, 0.3s left ease-in-out;
+}
+
+form:focus-within:before {
+  left: var(--spacing);
+  width: calc(100% - (var(--spacing) * 2));
+}
+
+input, 
+button {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+	padding: var(--spacing);
+	background: var(--color-dark);
+  
+  line-height: 1;
+	font-size: calc(1.5 * var(--spacing));
+  font-family: sans-serif;
+  color: var(--color-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+input {
+  padding-left: 0;
+}
+
+button svg {
+  width: calc(1.25 * var(--spacing)); 
+  height: calc(1.25 * var(--spacing));
+  fill: var(--color-light);
+  transition: 0.2s fill ease-in-out;
+}
+
+button:focus svg,
+button:hover svg {
+  fill: var(--color-primary);
+}
+
+/* Icons */
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+nav a {
+  padding: var(--spacing);
+  background: var(--color-primary);
+  line-height: 1;
+}
+
+nav a:not(:last-of-type) {
+  margin-right: var(--spacing);
+}
